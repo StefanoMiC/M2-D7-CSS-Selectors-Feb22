@@ -1,0 +1,157 @@
+#first > div > div {
+  background-color: red;
+}
+
+#first ul {
+  border: 3px solid black;
+}
+
+#first > ul > li {
+  border: 1px solid purple;
+}
+
+#first > ul > li > ul > li {
+  border: 2px solid blue;
+}
+
+/* .second-section .btn-group .btn-secondary.active {
+  background-color: blue;
+} */
+.btn-secondary:not(:disabled):not(.disabled):hover {
+  background-color: rgb(115, 115, 255);
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active {
+  background-color: blue;
+}
+
+#third .box > p {
+  color: red;
+}
+
+#fourth .divIWant + p {
+  color: red;
+}
+
+/* #fourth h2 + p {
+  font-style: italic;
+  font-size: 1.2rem;
+} */
+
+#fifth p ~ ul:not(span + ul) {
+  background-color: blueviolet;
+}
+
+#sixth input[checked] {
+  margin-left: 100px;
+  height: 20px;
+  width: 20px;
+}
+
+/* #sixth [class|="form"] {
+  border-color: red;
+} */
+
+/* 
+#sixth input[placeholder~="username" i] {
+  border-color: red;
+} */
+
+#sixth input[placeholder*="name" i] {
+  border-color: red;
+}
+
+#seventh a[href^="https"] {
+  color: green;
+}
+#seventh a[href^="http://"]
+{
+  color: red;
+}
+
+#seventh a[href$=".png"],
+#seventh a[href$=".jpg"] {
+  color: peru;
+}
+
+/* #eigth > div:first-child {
+  color: red !important;
+}
+#eigth > div:last-child {
+  color: red !important;
+} */
+
+#eigth > div:nth-of-type(6) {
+  color: aquamarine !important;
+}
+
+#eigth > div:first-of-type {
+  color: red !important;
+}
+#eigth > div:last-of-type {
+  color: red !important;
+}
+
+#eigth > div:only-child {
+  color: red !important;
+  width: 100% !important;
+  max-width: unset;
+  flex: unset;
+}
+
+body > div:first-of-type > div:nth-of-type(4) > div:first-of-type > div > div > div > h1 {
+  border: 2px solid red !important;
+}
+#ninth {
+  position: relative;
+  z-index: 0;
+}
+
+#ninth .box {
+  position: relative;
+}
+
+#ninth .box:hover::before {
+  content: "<<";
+  background-color: green;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: -30px;
+  top: -30px;
+  z-index: -1;
+}
+
+#ninth .box:hover::after {
+  content: ">>";
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: -30px;
+  bottom: -30px;
+  z-index: -1;
+}
+
+.img-wrapper {
+  position: relative;
+}
+
+.img-wrapper::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.img-wrapper img + p {
+  position: absolute;
+  font-weight: bold;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
